@@ -1,0 +1,123 @@
+/*
+Author: Han (Hannah) Chen
+Student #: A00931641
+*/
+
+@charset "utf-8";
+
+$primary-colour: #785381;
+$secondary-colour: #59557a;
+$size-one: 1100px;
+$size-two: 900px;
+$size-three: 700px;
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    background-color: #aea9a7;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main{
+    background-color: rgb(212, 184, 184);
+    padding:10px;
+    background-size: cover;
+    border-radius: 10px;
+    width:70%;
+  }  
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ecf0f1;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1{
+    color: $primary-colour;
+}
+
+.wrapper{
+    margin: auto;
+    padding: 20px;
+    border: 2px solid $primary-colour;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 70%;
+    min-height: 100vh;
+    @include flex-center;
+    flex-direction: column;
+
+    .score-board{
+        @include flex-center;
+        width: 100%;
+        justify-content: space-around;
+
+        .player-score, .computer-score{
+            border: 1px solid $secondary-colour;
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+            margin-bottom: 10px;
+            background-color: white;
+
+            h2{
+                color: $secondary-colour;
+            }
+
+            .dice{
+                @include flex-center;
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            p{
+                margin: 20px;
+            }
+        }
+    }
+
+    button{
+        margin-left: 20px;
+        margin-right: 5px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #9d83a3;
+            color: white;
+        }
+    }
+    
+    #winner-message{
+        color: $secondary-colour;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
+.fade-in{
+    animation: fadeIn 2s;
+}
+

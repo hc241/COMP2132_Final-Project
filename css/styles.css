@@ -1,0 +1,105 @@
+/*
+Author: Han (Hannah) Chen
+Student #: A00931641
+*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+html {
+  box-sizing: border-box;
+  background-color: #aea9a7;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+  background-color: rgb(212, 184, 184);
+  padding: 10px;
+  background-size: cover;
+  border-radius: 10px;
+  width: 70%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ecf0f1;
+  text-align: center;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #785381;
+}
+
+.wrapper {
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #785381;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 70%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+.wrapper .score-board .player-score, .wrapper .score-board .computer-score {
+  border: 1px solid #59557a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  margin-bottom: 10px;
+  background-color: white;
+}
+.wrapper .score-board .player-score h2, .wrapper .score-board .computer-score h2 {
+  color: #59557a;
+}
+.wrapper .score-board .player-score .dice, .wrapper .score-board .computer-score .dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .score-board .player-score .dice img, .wrapper .score-board .computer-score .dice img {
+  width: 60px;
+  height: 60px;
+}
+.wrapper .score-board .player-score p, .wrapper .score-board .computer-score p {
+  margin: 20px;
+}
+.wrapper button {
+  margin-left: 20px;
+  margin-right: 5px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.wrapper button:hover {
+  background-color: #9d83a3;
+  color: white;
+}
+.wrapper #winner-message {
+  color: #59557a;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.fade-in {
+  animation: fadeIn 2s;
+}

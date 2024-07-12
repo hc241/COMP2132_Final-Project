@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        Author: Han (Hannah) Chen
+        Student #: A00931641
+    -->
+        
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js" defer="defer"></script>
+        <title>Final Project | COMP 2132</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Final Project: Dice Game</h1>
+            </header>
+            <main>
+                <div class="score-board">
+                    <div class="player-score">
+                        <h2>Player</h2>
+                        <div class="dice">
+                            <img src="images/dice-1.png" alt="Dice 1 of Player" id="player-dice1">
+                            <img src="images/dice-1.png" alt="Dice 2 of Player" id="player-dice2">
+                        </div>
+                        <p>This Round's Score: <span id="player-round-score">0</span></p>
+                        <p>Total Score: <span id="player-total-score">0</span> </p>
+                    </div>
+                    <div class="computer-score">
+                        <h2>Computer</h2>
+                        <div class="dice">
+                            <img src="images/dice-1.png" alt="Dice 1 of Computer" id="computer-dice1">
+                            <img src="images/dice-1.png" alt="Dice 2 of Computer" id="computer-dice2">
+                        </div>
+                        <p>This Round's Score: <span id="computer-round-score">0</span></p>
+                        <p>Total Score: <span id="computer-total-score">0</span> </p>
+                    </div>
+                </div>
+                <button id="roll-button">Roll Dice</button>
+                <button id="reset-button">Reset Game</button>
+                <h2 id="winner-message"></h2>
+
+            </main>
+        </div>
+    </body>
+</html>
